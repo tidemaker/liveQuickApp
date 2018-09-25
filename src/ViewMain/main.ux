@@ -1,0 +1,128 @@
+<import name="home-page" src="../ViewHome/home"></import>
+<import name="live-broadcast-page" src="../ViewBroadcast/liveBroadcast"></import>
+<import name="personal-page" src="../ViewPersonal/personal"></import>
+
+<template>
+  <div class="container">
+    <tabs>
+      <!-- 内容显示区域 -->
+      <tab-content class="group-container" >
+
+        <!-- 首页 -->
+        <div class="group-content">
+          <home-page></home-page>
+        </div>
+
+        <!-- 我的直播 -->
+        <div class="group-content">
+          <live-broadcast-page></live-broadcast-page>
+        </div>
+
+        <!-- 个人中心 -->
+        <div class="group-content">
+          <personal-page></personal-page>
+        </div>
+
+      </tab-content>
+
+      <!-- 底部菜单 -->
+      <tab-bar class="foot-container" >
+      
+        <div class="tab-item">
+          <div class="tab-icon">
+            <image src="../Common/images/tab_home.svg"></image>
+          </div>
+          <text class="tab-text">首页</text>
+        </div>
+
+        <div class="tab-item" >
+          <div class="tab-icon">
+            <image src="../Common/images/tab_running.svg"></image>
+          </div>
+          <text class="tab-text">我的直播</text>
+        </div>
+
+        <div class="tab-item">
+          <div class="tab-icon">
+            <image src="../Common/images/tab_user.svg"></image>
+          </div>
+          <text class="tab-text">个人中心</text>
+        </div>
+
+      </tab-bar>
+
+    </tabs>
+
+  </div>
+
+</template>
+<script>
+
+  import router from '@system.router'
+  module.exports = {
+    props: {
+      
+    },
+
+    onInit() {
+      
+    },
+  }
+</script>
+
+
+<style lang="sass">
+   
+    .container{ 
+      height: 100% ;
+      background-color: #F8F8FF ; 
+      flex:1 ; 
+      flex-direction: column; 
+   
+      .group-container{
+        flex:1 ; 
+        flex-direction: column; 
+        line-height: 50px ;  
+        text-align: center;
+
+        .group-content {
+          flex-direction: column;
+          flex: 1;
+        }
+
+      }
+
+      .foot-container{
+        display: flex; 
+        width: 100%; 
+        height:120px; 
+        background-color: #ffffff ;
+        bottom: 0px ; 
+        left: 0px ; 
+
+        .tab-item{
+          flex:1; 
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          .tab-icon{
+            width: 50px; 
+            height: 50px; 
+            margin: 0 ; 
+            text-align: center;
+          }
+          .tab-text{
+            height: 80px ; 
+            line-height: 80px ;
+            text-align: center; 
+          }
+          .tab-text:active{
+            color: #F8B700
+          }
+        }   
+      }   
+
+    }
+
+</style>

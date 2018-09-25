@@ -1,0 +1,15 @@
+<template>
+  <div>
+    <text>首页内容</text>
+  </div>
+</template>
+<script>
+  module.exports = {
+    props: {
+      
+    },
+    onInit() {
+
+    },
+  }
+</script>

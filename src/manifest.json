@@ -1,0 +1,58 @@
+{
+  "package": "com.ghlive.quickapp",
+  "name": "光合直播",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "icon": "/Common/logo.png",
+  "minPlatformVersion": 1000,
+  "features": [
+    {
+      "name":"system.router"
+    },
+    {
+      "name":"system.prompt"
+    },
+    {
+      "name":"system.fetch"
+    }
+  ],
+  "permissions": [
+    { "origin": "*" }
+  ],
+  "config": {
+    "logLevel": "log"
+  },
+  "router": {
+    "entry": "ViewMain",
+    "pages": {
+      "ViewMain": {
+        "component": "main",
+        "path": "/main"
+      },
+      "ViewHome": {
+        "component": "home",
+        "path": "/home"
+      },
+      "ViewBroadcast": {
+        "component": "liveBroadcast",
+        "path": "/liveBroadcast"
+      },
+      "ViewPersonal": {
+        "component": "personal",
+        "path": "/personal"
+      }
+      
+    }
+  },
+  "display": {
+    "backgroundColor": "#fbf9fe",
+    "titleBarBackgroundColor": "#ffffff",
+    "titleBarTextColor": "#000",
+    "menu":true,
+    "pages": {
+      "ViewMain": {
+        "titleBarText": "光合直播"
+      }
+    }
+  }
+}
